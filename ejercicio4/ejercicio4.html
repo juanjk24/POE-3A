@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EJERCICIO 4</title>
+  </head>
+  <body>
+    <style>
+      /* establecemos la imagen principal en un ancho de 310px y 300 px */
+      #imagen-principal {
+        width: 310px;
+        height: 300px;
+      }
+
+      /* establecemos el contenedor de la imagen principal en el centro de la pagina */
+      #contenedor-img-principal {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+        margin-bottom: 10px;
+      }
+
+      /* establecemos la altura y ancho de las imagenes secundarias en 150px */
+      #imagen-secundaria {
+        width: 150px;
+        height: 150px;
+        margin-right: 5px;
+        margin-left: 5px;
+      }
+
+      /* establecemos el contenedor de las imagenes secundarias al centro de la pagina */
+      #contenedor-img-secundarias {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+    </style>
+
+    <!-- aqui definimos el contenedor de la imagen principal -->
+    <div id="contenedor-img-principal">
+      <img id="imagen-principal" src="img1.jpeg" alt="IMAGEN UNO" />
+    </div>
+
+    <!-- aqui definimos un contenedor el cual contiene las imagenes secundarias a las cuales se les podrá dar click para cambiar la principal -->
+    <div id="contenedor-img-secundarias">
+      <img id="imagen-secundaria" src="img1.jpeg" alt="IMAGEN TRES" />
+      <img id="imagen-secundaria" src="img2.jpeg" alt="IMAGEN DOS" />
+      <img id="imagen-secundaria" src="img3.jpeg" alt="IMAGEN TRES" />
+    </div>
+
+    <!-- aqui enlazamos el codigo de js con el documento html -->
+    <script src="ejercicio4.js"></script>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EJERCICIO 5</title>
+  </head>
+  <body>
+    <style>
+
+      /* establecemos los margenes de la pagina en 0px */
+      body {
+        margin: 0px;
+      }
+
+      /* establecemos el color de la cabecera en un color violeta */
+      #header{
+        background-color: blueviolet;
+      }
+
+      /* establecemos que haya un espacio en medio entre los elementos de la navegacion y que tambien tenga 50px de margen al lado izquierdo y derecho */
+      #navegacion {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 50px 0 50px;
+        color: white;
+      }
+
+      /* establecemos el tamaño del titulo en 30px */
+      #titulo{
+        font-size: 30px;
+      }
+
+      /* establecemos el contenedor de los links al medio de la navegacion y que tengan un espacio en medio entre cada uno de ellos */
+      #lista-links {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 400px;
+      }
+
+      /* estableemos los links con un color blanco, un tamaño de 24px y le quitamos la barra que tienen abajo por defecto  */
+      #lista-links a{
+        font-size: 24px;
+        color: white;
+        text-decoration: none;
+      }
+
+    </style>
+
+    <header id="header">
+      <nav id="navegacion">
+        <h1 id="titulo">Ejercicio 5</h1>
+        <div id="lista-links">
+            <a id="link" href="https://www.facebook.com/?locale=es_LA" target="_blank">Facebook</a>
+            <a id="link" href="https://www.instagram.com/" target="_blank">Instagram</a>
+            <a id="link" href="https://www.whatsapp.com/?lang=es_LA" target="_blank">WhastApp</a>
+        </div>
+      </nav>
+    </header>
+
+    <script src="ejercicio5.js"></script>
+  </body>
+</html>
