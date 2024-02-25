@@ -1,0 +1,53 @@
+
+<!-- jercicio 1: Botón Cambiante
+Crear una página con un botón que cambie de color cada vez que se hace clic en él. Utiliza
+tanto la asignación dinámica de eventos como la asignación mediante atributo HTML
+(onclick). Asegúrate de que el cambio de color se realice de manera aleatoria.
+
+ -->
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title> EJERCICIO 1 BOTON DE COLORES </title>
+
+<style>
+
+
+
+    #boton-color {
+        padding: 10px 20px; /* ESTE ES PARA DARLE UN ESPÁCIO EN EL TEXTO */
+        font-size: 16px;  /* ESTABLESCO EL TAMAÑO DEL TEXTO */
+        cursor: pointer; /* CON ESTE CAMBIO EL CUERSOR DEL RATON PARA QUE SE COMVIERTA EN UNA MANITO */
+        border: none; /* ELIMINA CUALQUIER BORDE ALREDEDOR DEL BOTON */
+        border-radius: 5px; /* CAMBIO EL ESTILO DEL BOTON */
+    }
+</style>
+</head>
+<body>
+
+<button id="boton-color" onclick="cambiarColor()">Cambiar color</button>
+
+<script >
+    // CREO LA FUNCION PARA CAMBIAR EL COLOR DE FORMA ALEATOREA 
+    function cambiarColor() {
+        let r = Math.floor(Math.random() * 256);  /* AQUI SE ALMACENAN COLORES QUE VAN  A SER 0 Y SE VAN MULTIPLICADO X 256 CAMBIANDO DE FORMA ALEATOREA */
+        let g = Math.floor(Math.random() * 256);
+        let b = Math.floor(Math.random() * 256);
+
+     
+        let color = "rgb(" + r + "," + g + "," + b + ")";  // CONSTRULLO  EL FORMATO DE RGB 
+ 
+        document.getElementById("boton-color").style.backgroundColor = color;    // Ccon esto cambio ekl  fondo del boton
+    }
+
+
+    document.getElementById("boton-color").addEventListener("click", cambiarColor); // aqui hago la asignacion dinamica .
+</script>
+
+</body>
+</html>

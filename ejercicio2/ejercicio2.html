@@ -1,0 +1,40 @@
+<!-- Ejercicio 2: Contador de Clics
+Implementar una página con un botón que, al hacer clic, incrementa un contador visible en la
+página. Utiliza la propiedad innerText para actualizar el número de clics. Emplea la
+asignación de eventos mediante addEventListener para manejar los clics. -->
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contador de clics</title>
+</head>
+<body>
+
+<button id="boton">Haz clic aquí</button>
+<p id="contador">0</p>
+
+<script>
+    
+    let boton = document.getElementById("boton")   //aqui creare el botón y el párrafo donde mostrare el contador
+    let contador = document.getElementById("contador")
+
+    
+    let count = 0;  // Inicializar el contador en 0
+
+    
+    function handleClick() {    // creo la Función para manejar el clic en el botón
+        
+        count++; //para hacer que el contador vaya de uno en uno
+     
+        contador.innerText = count; // aqui PARA QUE ACTUALICE EL CONNT CADA VEZ QUE LE DE CLICK
+    }
+
+    boton.addEventListener("click", handleClick); // Asigno el evento clic al botón utilizando addEventListene
+</script>
+
+</body>
+</html>

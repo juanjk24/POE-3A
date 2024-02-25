@@ -1,0 +1,52 @@
+<!-- Ejercicio 3: Validación de Formulario
+Crear un formulario simple que solicite al usuario su nombre. Utiliza eventos para validar que
+el nombre ingresado tenga al menos 3 caracteres antes de enviar el formulario. Muestra un
+mensaje de error si la validación no se cumple. -->
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulario de Nombre</title>
+</head>
+<body>
+
+<h1>Ingrese una palabra con mas de 3 caracteres</h1>   <!-- qui hago el texto par decirle a l ususrio que escruibir -->
+<form id="miFormulario">
+    <input type="text" id="nombre" name="nombre">
+    <button type="submit">Enviar</button>
+</form>
+<p id="mensajeError" style="color: rgb(255, 0, 0); display: none;">la palabra  no tiene 3 caracteres escribe una que tenga mas de 3 porfavor.</p>
+
+<script>
+ 
+    let formulario = document.getElementById("miFormulario")    // aqui Obtengo  el formulario y el campo de nombre y tambien el mensaje si hay error 
+    let inputNombre = document.getElementById("nombre")
+    let mensajeError = document.getElementById("mensajeError")
+
+
+    function validarNombre(event) {     //  creo la Función para validar el nombre antes de enviar el formulario para que funcione
+      
+        let nombre = inputNombre.value.trim()// Obtener el valor del nombre
+
+        
+        if (nombre.length < 3) {    // creo un si para Verificar si el nombre tiene al menos 3 caracteres
+          
+            mensajeError.style.display = "block" // Mostrar el mensaje de error
+        
+            event.preventDefault() // para que no envie el formulario
+        } else {
+           
+            mensajeError.style.display = "none"// Oculto el mensaje de error si el nombre tiene mas de 3 caracteres 
+        }
+    }
+
+   
+    formulario.addEventListener("submit", validarNombre);  
+</script>
+
+</body>
+</html>
