@@ -12,7 +12,7 @@ Este proyecto consiste en una barra de navegación interactivoa desarrollada uti
 El proyecto consta de los siguientes archivos:
 
 1. **ejercicio5.html**: Contiene la estructura HTML del menú o barra de navegación
-3. **ejercicio5.js**: Archivo JavaScript que implementa la funcionalidad interactiva del menú
+2. **ejercicio5.js**: Archivo JavaScript que implementa la funcionalidad interactiva del menú
 
 ## Instrucciones de Uso
 
